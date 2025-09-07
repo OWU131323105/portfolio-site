@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ | Matsuoka's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 600px) and (max-width: 999px)">
+    <link rel="stylesheet" href="pc.css" media="screen and (min-width: 1000px)">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="images/logo-s200.png" alt="松岡裕子のポートフォリオサイト">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="btn_02">自己紹介</a></li>
+                <li><a href="lecture.html" class="btn_02">履修記録</a></li>
+                <li><a href="portfolio.html" class="btn_02">学習成果</a></li>
+            </ul>
+        </nav>
+        <picture>
+            <source media="(min-width:600px)" srcset="images/moon-s1000.jpg, images/moon-s2000.jpg 2x">
+            <img src="images/moon-s600.jpg" srcset="images/moon-s1200.jpg 2x" alt="日本一の情報デザイナーを目指します。">
+        </picture>
+    </header>
+
+  <main>
+    <article id="blog-post">
+      <h1 id="post-title">読み込み中...</h1>
+      <p id="post-date"></p>
+      <div id="post-content"></div>
+    </article>
+    <div class="post-nav">
+  <a href="blog.html" class="btn_02">← 記事一覧に戻る</a>
+</div>
+
+  </main>
+
+    <footer>
+        <div id="footlinks">
+            <section>
+                <h2><a href="index.html">自己紹介</a></h2>
+                    <ul>
+                        <li>学歴</li>
+                        <li>資格</li>
+                    </ul>
+            </section>
+
+            <section>
+                <h2><a href="lecture.html">履修記録</a></h2>
+            </section>
+
+            <section>
+                <h2><a href="portfolio.html">学習成果</a></h2>
+                    <ul>
+                        <li>グラフィックス作品</li>
+                        <li>プログラムコード</li>
+                    </ul>
+            </section>
+        </div>
+        <p id="copyright">
+            <small>Copyright &copy; 2023 Hiroko Matsuoka. All rights reserved.</small>
+        </p>
+    </footer>
+
+  <script src="detail.js"></script>
+</body>
+</html>
