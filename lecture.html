@@ -1,95 +1,221 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Matsuoka's Portfolio</title>
-	<meta name="author" content="Matsuoka's Portfolio">
-	<meta name="description" content="大学生活の成果をポートフォリオに作成する">
-	<meta name="keywords" content="大学生活,授業,大学内成果,大学外成果,作品">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="tablet.css" media="screen and (min-width: 600px) and (max-width: 999px)">
-	<link rel="stylesheet" href="pc.css" media="screen and (min-width: 1000px)">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matsuoka's Portfolio</title>
+    <meta name="author" content="Matsuoka's Portfolio">
+    <meta name="description" content="大学生活の成果をポートフォリオに作成する">
+    <meta name="keywords" content="大学生活,授業,大学内成果,大学外成果,作品">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 600px) and (max-width: 999px)">
+    <link rel="stylesheet" href="pc.css" media="screen and (min-width: 1000px)">
 </head>
 
-<body>
+<body class="lecture-page">
 <header>
-	<div id="logo">
-		<a href="index.html">
-			<img src="images/logo-s200.png" alt="松岡裕子のポートフォリオサイト">
-		</a>
-	</div>
-	<nav>
-		<ul>
-			<li><a href="index.html" class="btn_02">自己紹介</a></li>
-			<li><a href="lecture.html" class="btn_02">履修記録</a></li>
-			<li><a href="portfolio.html" class="btn_02">学習成果</a></li>
-			<li><a href="blog.html" class="btn_02">ブログ</a></li>
-    	</ul>
-  	</nav>
-	<picture>
-		<source media="(min-width:600px)" srcset="images/moon-s1000.jpg, images/moon-s2000.jpg 2x">
-    	<img src="images/moon-s600.jpg" srcset="images/moon-s1200.jpg 2x" alt="日本一の情報デザイナーを目指します。">
-	</picture>
+    <div id="logo">
+        <a href="index.html">
+            <img src="images/logo-s200.png" alt="松岡裕子のポートフォリオサイト">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="btn_02">自己紹介</a></li>
+            <li><a href="lecture.html" class="btn_02">履修記録</a></li>
+            <li><a href="portfolio.html" class="btn_02">学習成果</a></li>
+            <li><a href="blog.html" class="btn_02">ブログ</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
-	<article>
- 		<h1>Course Record</h1>
-			<ul style="list-style: none; padding-left: 0;">
-				<li><h2 class="lecture">情報デザイン論及び演習</h2></li>
-					<li class="box">
-						<p>視覚における知覚現象、色彩、タイポグラフィ、レイアウトなどの基礎知識や基本的なルールを理解するとともに、様々なグラフィックデザインの演習を通して「デザインリテラシー」を学び、Adobe Illustratorを使用した基礎的な技術を習得します。</p>
-					</li>
-				<li><h2 class="lecture">データサイエンス・AI概論</h2></li>
-					<li class="box">
-						<p>主に「AI やデータサイエンスが社会にもたらす価値」と「デジタル技術が行き渡る社会における課題」をテーマとして、具体例や最新動向等を織り込みながら、データサイエンスが様々な事象にどう関与しているかという“ストーリー”や、データサイエンス・AI の利活用における留意事項や情報セキュリティ、情報漏洩等、データを守る上での留意事項について学びます。</p>
-					</li>
-				<li><h2 class="lecture">情報処理実習A</h2></li>
-					<li class="box">
-						<p>現代社会で身につけるべき必須の情報活用能力の基本である、文字・数値・画像情報を扱うワープロ、表計算ソフト、プレゼンテーションソフトを主体的に使いこなすことを目的に、パソコンでのインターネット検索・電子メールのやりとり、Wordによる文書作成の基本操作、Excelによる表計算・グラフ作成の基本操作、PowerPointによるプレゼンテーション作成の基本操作を習得します。</p>
-					</li>
-				<li><h2 class="lecture">情報処理実習B</h2></li>
-					<li class="box">
-						<p>わかりやすい・認知されやすいHP設計のデザイン論、Adobe Photoshopを使用した基礎的な画像編集、HTMLならびにCSSの基本ルールの理解を目標とし、オリジナルのホームページの設計から作成・公開に至るまでの一連の演習を通じて、総合的に情報発信の基本技術を学習・習得します。</p>
-					</li>
-				<li><h2 class="lecture">プログラミング入門</h2></li>
-					<li class="box">
-						<p>プログラミング言語JavaScriptのライブラリで視覚的表現を容易にするp5.jsと呼ぶツールを利用します。このp5.jsは、様々な図形やアニメーションを描くことや、ユーザ操作（マウス操作等）に反応するインタラクティブなグラフィックス作品を容易に作成できるため、プログラミング言語の教育やインタラクティブ・アートの制作に利用されています。
-					変数、条件分岐、繰り返し、関数などのプログラムの基本構文を学び、演習を通じて多くのコードを書くことで、プログラミングの基本となる概念を理解・習得します。</p>
-					</li>
-			</ul>
-			
-	</article>
+    <article>
+        <h1>Course Record</h1>
+
+        <nav class="year-toc">
+            <ul>
+                <li><a href="#year2025">2025年度（3年次）</a></li>
+                <li><a href="#year2024">2024年度（2年次）</a></li>
+                <li><a href="#year2023">2023年度（1年次）</a></li>
+            </ul>
+        </nav>
+        
+        <h2 id="year2025">2025年度（3年次）</h2>
+        
+        
+        <h2 id="year2024">2024年度（2年次）</h2>
+		<section class="lecture-list">
+            
+            <details class="course-detail">
+                <summary>
+                    <h3 class="lecture-title">プログラミング論及び演習</h3>
+                </summary>
+                <div class="box course-content">
+                    <p>Webブラウザ上で動作するプログラミング言語であるJavaScriptに焦点を当て、実践的なプログラミング技術を習得します。授業は、対話的なWebアプリケーションの作成を通じて、HTML5とJavaScriptの基礎から、DOM操作、サーバー連携、APIの利用まで、幅広い知識を体系的に学びます。最終的には、各自がテーマを設定してオリジナルのWebアプリケーションを制作し、プログラミングの実践的な応用力を養うことを目的としています。</p>
+                    <h4>【学んだスキル・成果】</h4>
+                    <ul>
+                        <li>JavaScriptの基礎
+							<p class="desc">変数、条件分岐、反復処理、関数などプログラミングの基本概念と文法の習得</p>
+						</li>
+						<li>Webプログラミング技術
+							<p class="desc">DOM操作、イベント処理、ローカルストレージAPI、jQueryの概要などWeb開発</p>
+						</li>
+                        <li>p5.jsライブラリの活用
+							<p class="desc">グラフィック描画ライブラリp5.jsの使用</p>
+							<p class="desc">アルゴリズムに基づいた模様描画や3Dグラフィックス表現の学習</p>
+						</li>
+                        <li>サーバー連携とAPI
+							<p class="desc">fetch()関数によるサーバーとのデータ通信</p>
+						</li>
+                    </ul>
+                </div>
+            </details>
+
+			<details class="course-detail">
+				<summary>
+					<h3 class="lecture-title">デジタルコンテンツ</h3>
+				</summary>
+				<div class="box course-content">
+					<p>この授業は、現代のヴィジュアル・コミュニケーションにおいて重要な役割を果たす静止画像、特にデジタル写真をテーマとします。デジタルカメラの仕組みや撮影の基礎知識を習得するだけでなく、各テーマに沿って自ら撮影し、Adobe Photoshopを用いた編集・レタッチ、そしてデザインワークとして再構成するプロセスを実践しました。一連の課題制作を通じて、「見ること」や「ヴィジュアルで思考すること」を探求し、最終的にコンテンツをデザインする思考力を養うことを目的としています。</p>
+					<h4>【学んだスキル・成果】</h4>
+					<ul>
+						<li>写真撮影とデジタルカメラの基礎知識
+							<p class="desc">焦点距離、シャッター速度、絞り、ISO感度、露出補正など、撮影の基本原理と技術の習得</p>
+							<p class="desc">デジタルカメラの仕組みと適切なカメラ操作方法の理解</p>
+						</li>
+						<li>画像編集とデザインの実践
+							<p class="desc">Adobe Photoshopを用いたフォトレタッチ、画像編集の基本操作と技術</p>
+							<p class="desc">課題テーマに合わせた写真の編集・再構成を通じたデザインワークの実践</p>
+							<p class="desc">スチルライフなど、演出された写真の制作による表現力の探求</p>
+						</li>
+						<li>コンテンツ制作と表現力
+							<p class="desc">撮影から編集、最終的なデザインワークへの落とし込みまでのコンテンツ制作プロセスの経験</p>
+							<p class="desc">写真をメッセージとして他者に発信するヴィジュアル・コミュニケーション能力</p>
+						</li>
+						<li>思考力と実践経験
+							<p class="desc">各課題テーマを通じたデザインする思考力の養成</p>
+							<p class="desc">担当教員の実務経験に基づく撮影・編集デザインの知識習得</p>
+							<p class="desc">フィールドワークやグループワークを通じた実践的な学習</p>
+						</li>
+					</ul>
+				</div>
+			</details>
+
+
+		</section>
+
+        <h2 id="year2023">2023年度（1年次）</h2>
+        
+        <section class="lecture-list">
+            
+            <details class="course-detail">
+                <summary>
+                    <h3 class="lecture-title">デザイン論及び演習Ⅰ・Ⅱ</h3>
+                </summary>
+                <div class="box course-content">
+                    <p>視覚における知覚現象、色彩、タイポグラフィ、レイアウトなどの基礎知識や基本的なルールを学び、様々なグラフィックデザインの演習を通して「デザインリテラシー」を習得します。Adobe Illustratorを使用した基礎的な技術も習得しました。</p>
+                    <h4>【学んだスキル・成果】</h4>
+                    <ul>
+                        <li>Adobe Illustratorを用いた**ロゴ、ポスター、名刺のDTP制作**</li>
+                        <li>**色彩理論、タイポグラフィの基礎**（視覚伝達の基本ルール）</li>
+                        <li>**デザイン思考**に基づく課題解決アプローチ</li>
+                    </ul>
+                    <p class="link-to-portfolio">→ 関連作品は<a href="portfolio.html">学習成果</a>ページにて公開しています。</p>
+                </div>
+            </details>
+            
+            <details class="course-detail">
+                <summary>
+                    <h3 class="lecture-title">データサイエンス・AI概論</h3>
+                </summary>
+                <div class="box course-content">
+                    <p>主に「AI やデータサイエンスが社会にもたらす価値」と「デジタル技術が行き渡る社会における課題」をテーマに学びました。データサイエンス・AI の利活用における留意事項や情報セキュリティについても学びました。</p>
+                    <h4>【学んだスキル・成果】</h4>
+                    <ul>
+                        <li>**データサイエンス・AIの基本概念**と社会への影響の理解</li>
+                        <li>**情報倫理**、情報セキュリティ、個人情報保護の重要性</li>
+                        <li>AIが関与する事象の**分析的思考力**</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <details class="course-detail">
+                <summary>
+                    <h3 class="lecture-title">情報処理実習A</h3>
+                </summary>
+                <div class="box course-content">
+                    <p>現代社会で必須の情報活用能力の基本として、Word、Excel、PowerPointの基本操作を習得しました。</p>
+                    <h4>【学んだスキル・成果】</h4>
+                    <ul>
+                        <li>**Word**によるビジネス文書作成（体裁の整え方）</li>
+                        <li>**Excel**によるデータ集計、グラフ作成、基本関数の利用</li>
+                        <li>**PowerPoint**による効果的なプレゼンテーション資料作成</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="course-detail">
+                <summary>
+                    <h3 class="lecture-title">情報処理実習B</h3>
+                </summary>
+                <div class="box course-content">
+                    <p>HP設計のデザイン論、Adobe Photoshopでの画像編集、HTML/CSSの基本ルールを学習し、オリジナルホームページの設計から作成・公開までの一連の技術を習得しました。</p>
+                    <h4>【学んだスキル・成果】</h4>
+                    <ul>
+                        <li>**HTML/CSSの基本コーディング**（このポートフォリオの基礎）</li>
+                        <li>**Adobe Photoshop**を用いたウェブ用画像の加工と最適化</li>
+                        <li>**ウェブアクセシビリティ**とユーザビリティの基礎</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <details class="course-detail">
+                <summary>
+                    <h3 class="lecture-title">プログラミング入門</h3>
+                </summary>
+                <div class="box course-content">
+                    <p>プログラミング言語JavaScriptのライブラリp5.jsを利用し、変数、条件分岐、繰り返し、関数などのプログラムの基本構文を理解・習得しました。</p>
+                    <h4>【学んだスキル・成果】</h4>
+                    <ul>
+                        <li>**JavaScriptの基本構文**とプログラミングの論理構造</li>
+                        <li>**p5.js**を用いた視覚的なインタラクティブアート制作</li>
+                        <li>アルゴリズムに基づいた**論理的思考力**</li>
+                    </ul>
+                </div>
+            </details>
+
+        </section>
+    </article>
 </main>
 
 <footer>
-	<div id="footlinks">
-   		<section>
-      		<h2><a href="index.html">自己紹介</a></h2>
-				<ul>
-					<li>学歴</li>
-					<li>資格</li>
-				</ul>
-   		</section>
-
-		<section>
-   			<h2><a href="lecture.html">履修記録</a></h2>
-		</section>
-
-		<section>
-   			<h2><a href="portfolio.html">学習成果</a></h2>
-				<ul>
-					<li>グラフィックス作品</li>
-					<li>プログラムコード</li>
-				</ul>
-    	</section>
-	</div>
-	<p id="copyright">
-   		<small>Copyright &copy; 2023 Hiroko Matsuoka. All rights reserved.</small>
-	</p>
+    <div id="footlinks">
+        <section>
+            <h2><a href="index.html">自己紹介</a></h2>
+                <ul>
+                    <li>学歴</li>
+                    <li>資格</li>
+                </ul>
+        </section>
+        <section>
+            <h2><a href="lecture.html">履修記録</a></h2>
+        </section>
+        <section>
+            <h2><a href="portfolio.html">学習成果</a></h2>
+                <ul>
+                    <li>グラフィックス作品</li>
+                    <li>プログラムコード</li>
+                </ul>
+        </section>
+        <section>
+            <h2><a href="blog.html">ブログ</a></h2>
+        </section>
+    </div>
+    <p id="copyright">
+        <small>Copyright &copy; 2023 Hiroko Matsuoka. All rights reserved.</small>
+    </p>
 </footer>
 
 </body>
-
 </html>
