@@ -63,6 +63,38 @@ nav a {
 	font-size: 0.9rem;	
 }
 
+/* =======================================================
+ * 現在地を明示するCSS
+ * ======================================================= */
+
+/* 自己紹介ページ */
+.home-page nav a[href="index.html"] {
+    background-color: #228bc8;
+    color: #fff;
+    border: 1px solid #228bc8;
+}
+
+/* 履修記録ページ */
+.lecture-page nav a[href="lecture.html"] {
+    background-color: #228bc8;
+    color: #fff;
+    border: 1px solid #228bc8;
+}
+
+/* 学習成果ページ */
+.portfolio-page nav a[href="portfolio.html"] {
+    background-color: #228bc8;
+    color: #fff;
+    border: 1px solid #228bc8;
+}
+
+/* ブログページ */
+.blog-page nav a[href="blog.html"] {
+    background-color: #228bc8;
+    color: #fff;
+    border: 1px solid #228bc8;
+}
+
 
 nav+picture img {
 	width: 100vw;
@@ -111,11 +143,18 @@ main h1 {
 main h2 {
 	background: #336699;
 	margin-top: 2rem;
-	padding: 20px 20px 0px;
+	padding: 20px 20px 20px; /* 下のpaddingも追加 */
 	font-family: serif;
 	font-size: 30px;
 	color: white;
 }
+
+.desc {
+  font-size: 0.9em;     /* 少し小さく */
+  color: #666;          /* グレーで階層感を出す */
+  margin-top: 4px;      /* 少し間を空ける */
+}
+
 
 .index {
 	background: #336699;
@@ -126,14 +165,14 @@ main h2 {
 	color: white;
 }
 
-.lecture {
+/* .lecture {
 	background: #336699;
 	margin-top: 2rem;
 	padding: 20px 20px;
 	font-family: serif;
 	font-size: 25px;
 	color: white;
-}
+} */
 
 .box{
     padding: 0.5em 1em;
@@ -188,6 +227,119 @@ h3 {
 	box-shadow: 0 0 0 5px white; /* 5ピクセルの青い線を描く*/
 }
 
+/* --- 【新規追加】年度ごとの目次スタイル --- */
+.year-toc {
+    margin-top: 1.5rem;
+    padding: 0;
+    text-align: center;
+}
+.year-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* 横並びにする */
+    justify-content: center;
+    gap: 15px; /* リンク間のスペース */
+}
+.year-toc a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 2px solid #228bc8;
+    color: #336699;
+    transition: background-color 0.2s;
+}
+.year-toc a:hover {
+    background-color: #f0f8ff;
+}
+
+/* --- 【新規追加】開閉UIのスタイル --- */
+/* <details> 全体のスタイル */
+.course-detail {
+    border: 1px solid #ddd;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    overflow: hidden; /* 角丸のため */
+}
+
+/* <summary> (タイトル部分) のスタイル */
+.course-detail summary {
+    display: block; /* H3全体をクリック可能にするため */
+    padding: 0; /* h3側でpaddingを管理 */
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    /* デフォルトのマーカー（三角）を消す */
+    list-style: none;
+}
+/* summary のデフォルトマーカーを非表示にする（Firefox対応） */
+.course-detail summary::-webkit-details-marker {
+    display: none;
+}
+.course-detail summary::marker {
+    display: none;
+}
+
+
+/* h3 (科目名) のスタイルを調整して summary にフィットさせる */
+.lecture-title {
+    /* 既存の .lecture スタイルを継承しつつ調整 */
+	background: #228bc8;
+	margin: 0; /* marginをリセット */
+	padding: 15px 20px; /* 内側の余白を調整 */
+	font-family: sans-serif; /* serifからsans-serifに変更 */
+	font-size: 1.2rem; /* サイズ調整 */
+	color: white;
+}
+
+/* 開閉状態を示すアイコン */
+.course-detail summary::after {
+    content: '+'; /* 閉じた状態のアイコン */
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s;
+}
+
+/* 開いた状態のアイコン */
+.course-detail[open] summary::after {
+    content: '−'; /* 開いた状態のアイコン */
+}
+
+/* <details> 内のコンテンツのスタイル */
+.course-content {
+    /* .box のスタイルが適用されますが、微調整を加えます */
+    border-top: none; /* 上部の線を消す */
+    margin: 0; /* marginをリセット */
+    padding: 1.5rem; /* 内側の余白を調整 */
+    background: #fdfdfd; /* 背景色を少し明るく */
+}
+/* スキルリストのスタイル */
+.course-content ul {
+    list-style: disc; /* マーカーを点に */
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.course-content ul li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+/* スキルリストの見出し */
+.course-content h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #336699;
+}
+/* リンクのスタイル */
+.link-to-portfolio {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: right;
+}
 
 /* =======================================================
  *   フッター
@@ -225,6 +377,49 @@ footer {
 }
 
 
+/* =======================================================
+ * ブログ一覧ページ
+ * ======================================================= */
+#blog-list {
+    list-style: none; /* リストの点（・）を消す */
+    padding: 0;
+}
+
+#blog-list article {
+    border-radius: 8px; /* 角を丸くする */
+    margin-bottom: 20px; /* 記事間の下余白 */
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 記事に影をつける */
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#blog-list article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#blog-list h2 {
+    background: #336699;
+    margin-top: 10px;
+    padding: 10px 20px 10px;
+    font-family: sans-serif;
+	font-weight: 500;
+    font-size: 20px;
+    color: white;
+}
+
+#blog-list h2 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#blog-list h2 a:hover {
+    text-decoration: underline;
+}
+
+
 /* detail.css に追加（または style.css に統合） */
 #blog-post {
   max-width: 800px;
@@ -249,7 +444,7 @@ footer {
 
 #post-content {
   line-height: 1.8;
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
   color: #444;
 }
 
@@ -267,4 +462,65 @@ footer {
 }
 .post-nav a:hover {
   background-color: #005fa3;
+}
+
+/* =======================================================
+ * 検索バーとタグのデザイン
+ * ======================================================= */
+
+/* 検索バーのラッパー（searchWrapper）のスタイル */
+.search-wrapper {
+    margin: 20px 0;
+    display: flex; /* Flexboxで横並びにする */
+    gap: 10px; /* アイテム間の余白 */
+    align-items: center; /* 垂直方向中央揃え */
+    max-width: 600px; /* 最大幅を設定して中央に配置 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 検索ボックスのスタイル */
+input[type="text"] {
+    flex-grow: 1; /* 親要素の幅に合わせて伸縮 */
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* 角を丸くする */
+    font-size: 1rem;
+    outline: none; /* フォーカス時のアウトラインを消す */
+    transition: border-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+input[type="text"]:focus {
+    border-color: #228bc8; /* フォーカス時にボーダー色を変更 */
+    box-shadow: 0 0 5px rgba(34, 139, 200, 0.3); /* フォーカス時に影を追加 */
+}
+
+/* 検索ボタンのスタイル */
+.search-button { /* HTML側でこのクラスをボタンに追加する必要があります */
+    padding: 10px 20px;
+    background-color: #336699; /* ボタンの背景色 */
+    color: white;
+    border: none;
+    border-radius: 25px; /* 角を丸くする */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.search-button:hover {
+    background-color: #224466; /* ホバー時に少し暗く */
+}
+
+/* タグのスタイル */
+.tag {
+    display: inline-block; /* インラインブロック要素として扱い、paddingなどを適用 */
+    background-color: #e0e0e0; /* タグの背景色 */
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 15px; /* 角を丸くする */
+    margin-right: 8px; /* タグ間の右余白 */
+    margin-top: 5px; /* タグの上余白 */
+    margin-bottom: 5px; /* タグの下余白 */
+    font-size: 0.85rem;
+    white-space: nowrap; /* タグが改行されないようにする */
 }
