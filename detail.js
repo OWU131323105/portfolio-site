@@ -7,8 +7,14 @@ fetch("blogposts.json")
     const post = posts.find(p => p.id === postId);
     if (post) {
       document.getElementById("post-title").textContent = post.title;
-      document.getElementById("post-date").textContent = post.date;
-      document.getElementById("post-content").textContent = post.content;
+      const date = new Date(post.date);
+      const formattedDate = date.toLocaleDateString('ja-JP', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      document.getElementById("post-date").textContent = formattedDate;
+      document.getElementById("post-content").innerHTML = post.content;
     } else {
       document.getElementById("blog-post").innerHTML = "<p>記事が見つかりませんでした。</p>";
     }
