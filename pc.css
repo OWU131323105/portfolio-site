@@ -1,1 +1,81 @@
-﻿/* ======================================================= *   ページ全体 * ======================================================= */body {	color: #666;}header, main, #footlinks {	width: 1000px;	margin-left: auto;	margin-right: auto;}/* ======================================================= *   ヘッダー * ======================================================= */header {	display: grid;	grid-template-columns: 106px 1fr;	grid-template-rows: auto auto;}#logo, img {	vertical-align: baseline;}nav ul {	display: block;	margin: 0;	padding: 0;	text-align: right;	line-height: 40px;}nav li, nav a {	display: inline;}nav li {	margin: 0 0.4rem;}nav a {	background: transparent;	vertical-align: -20px;}nav+picture {	grid-column: 1 / 2;	grid-row: 2;}nav+picture img {	width: 1000px;}/* ======================================================= *   メインコンテンツ * ======================================================= *//* ======================================================= *   フッター * ======================================================= */#footlinks {	display: grid;	grid-template-columns: 1fr 1fr 1fr;	grid-template-rows: auto;}#footlinks section:nth-child(n+2) {	margin-left: 1.2rem;}#footlinks {	font-size: 0.9rem;}
+/* =======================================================
+ *   ページ全体
+ * ======================================================= */
+
+body {
+	color: #666;
+}
+
+header, main, #footlinks {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* =======================================================
+ *   ヘッダー
+ * ======================================================= */
+
+header {
+	display: grid;
+	grid-template-columns: 106px 1fr;
+	grid-template-rows: auto auto;
+}
+
+#logo, img {
+	vertical-align: baseline;
+}
+
+nav ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	line-height: 40px;
+}
+
+nav li, nav a {
+	display: inline;
+}
+
+nav li {
+	margin: 0 0.4rem;
+}
+
+nav a {
+	background: transparent;
+	vertical-align: -20px;
+}
+
+nav+picture {
+	grid-column: 1 / 2;
+	grid-row: 2;
+}
+
+nav+picture img {
+	width: 1000px;
+}
+
+/* =======================================================
+ *   メインコンテンツ
+ * ======================================================= */
+
+/* =======================================================
+ *   フッター
+ * ======================================================= */
+
+#footlinks {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+#footlinks section:nth-child(n+2) {
+	margin-left: 1.2rem;
+}
+
+#footlinks {
+	font-size: 0.9rem;
+}
+
